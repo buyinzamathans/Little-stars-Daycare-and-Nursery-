@@ -441,13 +441,25 @@ a {
     box-shadow: var(--card-shadow);
 }
 
+/* FIX: Centers items vertically */
 .tab-content.active {
     display: flex;
+    align-items: center; 
 }
 
+/* FIX: Added min-height to balance with the video */
 .tab-content img {
     width: 50%;
+    min-height: 400px;
     object-fit: cover;
+}
+
+/* FIX: Controls the TikTok iframe on desktop */
+.tab-content iframe {
+    margin: 30px auto; 
+    height: 480px !important; 
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(8, 45, 90, 0.15); 
 }
 
 .tab-text {
@@ -600,8 +612,25 @@ a {
         flex-direction: column;
     }
 
-    .tab-content img, .tab-text {
+    .tab-content img {
         width: 100%;
+        min-height: auto; /* Resets the min-height for mobile images */
+    }
+
+    /* FIX: Mobile TikTok video sizing and spacing */
+    .tab-content iframe {
+        width: 90% !important; 
+        max-width: 350px !important; 
+        height: 450px !important; 
+        margin: 25px auto 0 !important; 
+    }
+
+    /* FIX: Centers the text nicely under the video on mobile */
+    .tab-text {
+        width: 100%;
+        padding: 30px 20px;
+        text-align: center; 
+        align-items: center;
     }
     
     .hero-content h1 {
