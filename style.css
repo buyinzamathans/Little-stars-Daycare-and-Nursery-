@@ -4,7 +4,7 @@
 :root {
     --primary-blue: #082d5a; 
     --secondary-blue: #1c5296; 
-    --fun-accent: #FFAD05; /* A happy, warm nursery yellow/orange */
+    --fun-accent: #FFAD05; 
     --text-dark: #222222; 
     --text-light: #555555;
     --bg-light: #ffffff; 
@@ -109,17 +109,30 @@ a {
     justify-content: space-between;
     align-items: center;
     height: auto; 
-    min-height: 70px; /* Slimmer header */
+    min-height: 70px; 
     padding: 5px 0;
     transition: var(--transition);
 }
 
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.brand-text {
+    font-family: var(--font-main);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    letter-spacing: -0.5px;
+    text-shadow: 1px 2px 4px rgba(8, 45, 90, 0.15); 
+}
+
 .logo img {
-    height: 60px; /* Keep physical footprint small */
+    height: 70px; 
     width: auto;
     object-fit: contain;
-    transform: scale(1.35); /* Visually magnifies the logo by 35% */
-    transform-origin: left center; /* Ensures it scales outward safely */
     transition: var(--transition);
 }
 
@@ -137,7 +150,7 @@ a {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--fun-accent); /* Updated to the fun accent color */
+    color: var(--fun-accent); 
 }
 
 /* Mobile Menu Button */
@@ -357,10 +370,10 @@ a {
 
 .video-card {
     width: 100%;
-    max-width: 325px; /* Restricts the width to a standard phone size */
+    max-width: 325px; 
     margin: 0 auto; 
     background: var(--white);
-    border-radius: 20px; /* Slightly rounder for a fun vibe */
+    border-radius: 20px; 
     overflow: hidden;
     box-shadow: var(--card-shadow);
     transition: var(--transition);
@@ -474,7 +487,7 @@ a {
     justify-content: space-between;
     align-items: center;
     box-shadow: var(--card-shadow);
-    border-left: 6px solid var(--fun-accent); /* Accented border */
+    border-left: 6px solid var(--fun-accent); 
 }
 
 .event-date {
@@ -544,17 +557,25 @@ a {
         height: auto;
         min-height: 70px;
     }
+
+    /* Mobile branding adjustments */
+    .brand-container {
+        gap: 10px; 
+    }
+
+    .brand-text {
+        font-size: 1.6rem; 
+    }
     
     .logo img {
-        height: 60px; 
-        transform: scale(1.2); /* Scaled down slightly so it doesn't overlap mobile menu */
+        height: 50px; 
     }
 
     .nav-links {
         display: none; 
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Aligned with the new header height */
+        top: 70px; 
         left: 0;
         width: 100%;
         background: var(--white);
