@@ -465,6 +465,7 @@ a {
     border-radius: 12px;
     margin: 30px auto; 
     box-shadow: 0 4px 15px rgba(8, 45, 90, 0.15); 
+    touch-action: auto;
 }
 
 .tiktok-locked-container iframe {
@@ -478,9 +479,10 @@ a {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50%; /* Blocks swipes/clicks on the bottom area */
+    height: 25%; /* Keeps play button open */
     z-index: 10;
     background: transparent;
+    pointer-events: none; /* Allows taps to reach the play button directly */
 }
 
 .tab-text {
