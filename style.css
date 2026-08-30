@@ -110,12 +110,14 @@ a {
     justify-content: space-between;
     align-items: center;
     height: 95px; 
+    transition: var(--transition);
 }
 
 .logo img {
     height: 80px; 
     width: auto;
     object-fit: contain;
+    transition: var(--transition);
 }
 
 .nav-links {
@@ -181,10 +183,11 @@ a {
 }
 
 /* ==========================================================================
-   Hero Section (UPDATED WITH NEW BACKGROUND IMAGE)
+   Hero Section (OPACITY AND TEXT SHADOW FIXES)
    ========================================================================== */
 .hero-section {
-    background: linear-gradient(rgba(8, 45, 90, 0.85), rgba(28, 82, 150, 0.75)), url('assets/1ec0d204-5974-47c2-bbf3-a21944ba8c50.jpg') center/cover;
+    /* Changed gradient opacity to 30% (0.3) */
+    background: linear-gradient(rgba(8, 45, 90, 0.3), rgba(28, 82, 150, 0.3)), url('assets/1ec0d204-5974-47c2-bbf3-a21944ba8c50.jpg') center/cover;
     color: var(--white);
     text-align: center;
     padding: 100px 20px;
@@ -193,6 +196,7 @@ a {
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Ensures readability on bright background */
 }
 
 .hero-content p {
@@ -201,6 +205,7 @@ a {
     margin: 0 auto 30px;
     padding: 0 15px; 
     line-height: 1.8; 
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8); /* Ensures readability on bright background */
 }
 
 .hero-buttons {
@@ -224,20 +229,21 @@ a {
     background-color: var(--white);
     color: var(--primary-blue);
     border: 2px solid var(--white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .primary-btn:hover {
     background-color: #f0f0f0;
     border-color: #f0f0f0;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(255,255,255,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .secondary-btn {
-    background-color: #25D366; /* WhatsApp Green */
+    background-color: #25D366; 
     border: 2px solid #25D366;
     color: var(--white);
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
 }
 
 .secondary-btn:hover {
@@ -245,7 +251,7 @@ a {
     border-color: #128C7E;
     color: var(--white);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
 }
 
 /* ==========================================================================
@@ -498,18 +504,27 @@ a {
 }
 
 /* ==========================================================================
-   Responsive Media Queries
+   Responsive Media Queries (MOBILE FIXES APPLIED HERE)
    ========================================================================== */
 @media (max-width: 768px) {
     body::before {
         background-size: 90% auto; 
     }
 
+    /* Fixed Header White Space */
+    .header-container {
+        height: 70px; /* Reduced height to hug the logo */
+    }
+    
+    .logo img {
+        height: 55px; /* Ensures logo fits nicely inside the new 70px height */
+    }
+
     .nav-links {
         display: none; 
         flex-direction: column;
         position: absolute;
-        top: 95px; 
+        top: 70px; /* Matched to the new header height */
         left: 0;
         width: 100%;
         background: var(--white);
@@ -542,8 +557,20 @@ a {
         font-size: 2.5rem;
     }
     
+    /* Fixed Button Collision */
+    .hero-section {
+        /* Added extra padding (120px) to the bottom so it clears the WhatsApp icon */
+        padding: 60px 20px 120px; 
+    }
+    
     .hero-buttons {
         flex-direction: column;
+        gap: 15px; /* Keeps a nice gap between the stacked buttons */
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%; /* Makes the buttons stretch cleanly across the mobile screen */
     }
     
     .video-grid {
