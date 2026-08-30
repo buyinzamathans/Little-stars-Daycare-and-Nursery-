@@ -645,12 +645,12 @@ a {
     .hero-buttons {
         flex-direction: column;
         width: 100%;
-        /* FIX: Removed gap to rely on margin instead */
+        gap: 0; /* FIX: Stops desktop gap from sneaking in */
     }
     
     .hero-buttons .btn {
         width: 100%; 
-        margin-bottom: 15px; /* FIX: Forces space below each button */
+        margin-bottom: 10px; /* FIX: Tighter space below each button */
     }
 
     .hero-buttons .btn:last-child {
