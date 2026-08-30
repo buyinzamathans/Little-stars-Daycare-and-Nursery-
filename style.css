@@ -95,7 +95,7 @@ a {
 }
 
 /* ==========================================================================
-   Header & Navigation (Updated Logo Size)
+   Header & Navigation
    ========================================================================== */
 .site-header {
     background: var(--white);
@@ -181,10 +181,10 @@ a {
 }
 
 /* ==========================================================================
-   Hero Section
+   Hero Section (UPDATED WITH NEW BACKGROUND IMAGE)
    ========================================================================== */
 .hero-section {
-    background: linear-gradient(rgba(8, 45, 90, 0.85), rgba(28, 82, 150, 0.75)), url('assets/school-building.jpg') center/cover;
+    background: linear-gradient(rgba(8, 45, 90, 0.85), rgba(28, 82, 150, 0.75)), url('assets/1ec0d204-5974-47c2-bbf3-a21944ba8c50.jpg') center/cover;
     color: var(--white);
     text-align: center;
     padding: 100px 20px;
@@ -199,8 +199,8 @@ a {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto 30px;
-    padding: 0 15px; /* Added breathing room for mobile */
-    line-height: 1.8; /* Increased line-height for better readability */
+    padding: 0 15px; 
+    line-height: 1.8; 
 }
 
 .hero-buttons {
@@ -233,7 +233,6 @@ a {
     box-shadow: 0 4px 10px rgba(255,255,255,0.2);
 }
 
-/* Updated to make the WhatsApp button pop */
 .secondary-btn {
     background-color: #25D366; /* WhatsApp Green */
     border: 2px solid #25D366;
@@ -242,7 +241,7 @@ a {
 }
 
 .secondary-btn:hover {
-    background-color: #128C7E; /* Darker WhatsApp Green */
+    background-color: #128C7E; 
     border-color: #128C7E;
     color: var(--white);
     transform: translateY(-2px);
