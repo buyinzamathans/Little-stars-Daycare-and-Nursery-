@@ -424,6 +424,7 @@ a {
     cursor: pointer;
     font-weight: 600;
     transition: var(--transition);
+    margin: 5px 8px; /* FIX: Added margin for older browsers */
 }
 
 .tab-btn.active, .tab-btn:hover {
@@ -643,11 +644,16 @@ a {
     
     .hero-buttons {
         flex-direction: column;
-        gap: 15px; 
         width: 100%;
+        /* FIX: Removed gap to rely on margin instead */
     }
     
     .hero-buttons .btn {
         width: 100%; 
+        margin-bottom: 15px; /* FIX: Forces space below each button */
+    }
+
+    .hero-buttons .btn:last-child {
+        margin-bottom: 0; /* FIX: Removes extra space under the very last button */
     }
 }
