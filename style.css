@@ -557,6 +557,30 @@ a {
 .floating-whatsapp:hover {
     transform: scale(1.1);
 }
+/* Floating Call Button on the Left */
+.floating-call {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* Positions it on the opposite side */
+    background-color: var(--primary-blue); /* Uses your dark blue theme color */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(8, 45, 90, 0.4);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.floating-call:hover {
+    transform: scale(1.1);
+    background-color: var(--fun-accent); /* Turns fun yellow when tapped/hovered */
+    color: var(--primary-blue);
+    box-shadow: 0 6px 20px rgba(255, 173, 5, 0.5);
+}
 
 /* ==========================================================================
    Responsive Media Queries 
