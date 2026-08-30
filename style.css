@@ -183,11 +183,11 @@ a {
 }
 
 /* ==========================================================================
-   Hero Section (OPACITY AND TEXT SHADOW FIXES)
+   Hero Section (OPACITY 40% AND HEAVIER TEXT SHADOW)
    ========================================================================== */
 .hero-section {
-    /* Changed gradient opacity to 30% (0.3) */
-    background: linear-gradient(rgba(8, 45, 90, 0.3), rgba(28, 82, 150, 0.3)), url('assets/1ec0d204-5974-47c2-bbf3-a21944ba8c50.jpg') center/cover;
+    /* Set gradient opacity to 40% (0.4) */
+    background: linear-gradient(rgba(8, 45, 90, 0.4), rgba(28, 82, 150, 0.4)), url('assets/1ec0d204-5974-47c2-bbf3-a21944ba8c50.jpg') center/cover;
     color: var(--white);
     text-align: center;
     padding: 100px 20px;
@@ -196,7 +196,7 @@ a {
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Ensures readability on bright background */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); 
 }
 
 .hero-content p {
@@ -205,7 +205,9 @@ a {
     margin: 0 auto 30px;
     padding: 0 15px; 
     line-height: 1.8; 
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8); /* Ensures readability on bright background */
+    font-weight: 500; /* Added a bit of weight for readability */
+    /* Double layered shadow to make it pop against the background */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9), 0px 0px 4px rgba(0, 0, 0, 0.8); 
 }
 
 .hero-buttons {
@@ -504,27 +506,29 @@ a {
 }
 
 /* ==========================================================================
-   Responsive Media Queries (MOBILE FIXES APPLIED HERE)
+   Responsive Media Queries (BIGGER LOGO APPLIED HERE)
    ========================================================================== */
 @media (max-width: 768px) {
     body::before {
         background-size: 90% auto; 
     }
 
-    /* Fixed Header White Space */
+    /* Adjusted Header to fit the bigger logo */
     .header-container {
-        height: 70px; /* Reduced height to hug the logo */
+        height: 90px; 
     }
     
+    /* Bigger Logo */
     .logo img {
-        height: 55px; /* Ensures logo fits nicely inside the new 70px height */
+        height: 75px; 
+        width: auto;
     }
 
     .nav-links {
         display: none; 
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Matched to the new header height */
+        top: 90px; /* Matched to the new header height */
         left: 0;
         width: 100%;
         background: var(--white);
@@ -557,20 +561,18 @@ a {
         font-size: 2.5rem;
     }
     
-    /* Fixed Button Collision */
     .hero-section {
-        /* Added extra padding (120px) to the bottom so it clears the WhatsApp icon */
         padding: 60px 20px 120px; 
     }
     
     .hero-buttons {
         flex-direction: column;
-        gap: 15px; /* Keeps a nice gap between the stacked buttons */
+        gap: 15px; 
         width: 100%;
     }
     
     .hero-buttons .btn {
-        width: 100%; /* Makes the buttons stretch cleanly across the mobile screen */
+        width: 100%; 
     }
     
     .video-grid {
