@@ -359,6 +359,23 @@ button, input, select, textarea {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
+/* Photo-background inner banners (About, Anthems, Campus Life) */
+.page-banner {
+    color: var(--white);
+}
+
+.page-banner h1 {
+    color: var(--white);
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.55);
+}
+
+.page-banner p {
+    color: var(--white);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+=======
 /* Photo-background inner banners (About, Anthems, Campus Life) */
 .page-banner {
     color: var(--white);
@@ -376,6 +393,7 @@ button, input, select, textarea {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
+>>>>>>> 6f30d5417bff66fa98d0af799cb842f5193180de
 /* ==========================================================================
    Grids & Content Cards
    ========================================================================== */
